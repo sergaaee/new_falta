@@ -1,9 +1,7 @@
-def limit(p1, p2, x):
-    if (x <= p1):
-        limit = p1
-    elif (x < p2):
-        limit = x
-    else:
-        limit = p2
+from constants import *
 
-    return limit
+def limit(p1, p2, x):
+    return p1 if x <= p1 else x if x < p2 else p2
+
+timer = Timer()
+print(timer.tas)
