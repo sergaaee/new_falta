@@ -35,12 +35,12 @@ def equation_of_motion():
         zbmrdd = (-fmgr + fdmtr * sinthe + fmtr * costhe) / mm - g * costhe
         xbmrdd = (-fnmgr + fdmtr * costhe - fmtr * sinthe) / mm + g * sinthe
 
-    # Уравнения для жесткого тела.
+    # Equations for rigid body motion
     if irigid == 1:
         for i in range(ntm):
             qdd[i] = 0.0
         if time != 0.0:
-            # Переход к блоку '254'
+            # go to '254'
             pass
     else:
         # modal equations
@@ -52,7 +52,7 @@ def equation_of_motion():
                     - gomeg[i] * qdot[i] - omsq[i] * q[i]
             )
 
-        # Если iasym == 1, расчет дополнительных уравнений.
+        # more eqs to calculate if iasym==1.
         if iasym == 1:
             for i in range(nam):
                 k = nsm + i
